@@ -1,0 +1,56 @@
+{
+  "name": "k8s-port-forward-service",
+  "displayName": "Kubernetes Port Forward",
+  "description": "Kubernetes Port Forward: list services and forward their ports with an interactive UI and multi-select support",
+  "version": "0.0.17",
+  "publisher": "oijusti",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "icon": "images/icon.png",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "kubernetes",
+    "k8s",
+    "port-forward",
+    "kubectl",
+    "service",
+    "pods",
+    "microservices",
+    "multi-select",
+    "batch"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oijusti/k8s-port-forward-ext"
+  },
+  "bugs": {
+    "url": "https://github.com/oijusti/k8s-port-forward-ext/issues"
+  },
+  "homepage": "https://github.com/oijusti/k8s-port-forward-ext#readme",
+  "license": "MIT",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "k8s-port-forward.start",
+        "title": "Kubernetes: Port Forward"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "@types/vscode": "^1.78.0",
+    "typescript": "^5.0.4",
+    "@vscode/vsce": "^2.15.0"
+  }
+}
